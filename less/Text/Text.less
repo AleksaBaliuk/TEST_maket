@@ -28,8 +28,22 @@
 			}
 		}
 	}
+	
+	&-nameSect {
+		font-size: 31px;
+		color: #4e4e4e;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		line-height: 22px;
+	}
 
 	&-sub {
+		color: #4e4e4e;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 300;
+		line-height: 22px;
+		font-size: 14px;
+		padding-right: 9px;
 		
 		&--photo {
 			float: left;
@@ -39,6 +53,17 @@
 			shape-outside: circle(50%);
 			clip-path: circle(50%);
 		}
+	&--column {
+		-webkit-column-width: 285px;
+	    -moz-column-width: 285px;
+	    column-width: 285px;
+	    -webkit-column-count: 3;
+	    -moz-column-count: 3;
+	    column-count: 3;
+	    -webkit-column-gap: 33px;
+	    -moz-column-gap: 33px;
+	    column-gap: 33px;
+	}
+	}
 	
-}
 }
