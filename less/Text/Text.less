@@ -1,0 +1,44 @@
+.Text {
+	
+	&-form {
+		color: #666666;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 18px;
+		font-weight: 300;
+		line-height: 48px;
+		margin: 0;
+		padding-right: 54px;
+
+		&--looking {
+			padding-left: 25px;
+			padding-right: 0;
+			position: relative;
+
+			&::before {
+				position: absolute;
+				content: '';
+				display: block;
+				width: 16px;
+				height: 15px;
+				background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAABZUlEQVQ4T3WSwVXCQBCG/4HsPm9gB1iBdGDoQCoQKxAObF5ucorZHEIHPCsQKxArMHSAFYg3n5Csb8KGRxYzt2Tn+/ef+ZfQUFrrEYA7A/QBbAFkMGYZBMFzhZDLaq37BljgAJ0VASshxHAymWxrcJqm3d/d7gNAD8A3AWO+MSfqtorCBxF/d1hAKTWowU9azwl4APApheiz+unV1tXKCtzX4Fhrbu4URINwOuWms4qTZAxjUgDvR9iqsmUESp3tolI57fsP3gRKXTWlYPfyxeeubcM/pRCX7ryVWBzHtyB64b24MM95A2AZKDVsmJnzvoYxsxocJYnfMuathIyZSylnlYMoinrtdnthAJ9jlEL0jrCdhUH3cWQAujZ7luX8faVUVsI1kGiNoni0D4JHOBYBr3mej8Mw3JQLc0HpeX5llc9+9vvSyYXnZe4SKdb6sCSi9SnYFFXNCYcO4FEIMWqKp0noD1tuofjXWGEsAAAAAElFTkSuQmCC
+					) 50% 50% no-repeat;
+				background-size: contain;
+				left: 3px;
+				top: 17px;
+			}
+		}
+	}
+
+	&-sub {
+		
+		&--photo {
+			float: left;
+    		border-radius: 50%;
+    		width: 173px;
+			height: 173px;
+			shape-outside: circle(50%);
+clip-path: circle(50%);
+		}
+	
+}
+}
