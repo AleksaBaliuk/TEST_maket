@@ -2,9 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 	<link rel="stylesheet" href="css/main.css">
-	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>	
 	<title>Test</title>
 </head>
 <body>
@@ -170,6 +172,62 @@
 									<div class="Slider-miniItem"><img src="img/slide2.png" alt="2"></div>
 								</div>
 							</div>
+							<div class="Tabs u-flexStart">
+								<div class="Tabs-caption">
+									<button class="Tabs-captionButton Tabs-captionButton--active">Users List</button>
+						  			<button class="Tabs-captionButton">Active list tab <span>| 38</span></button>
+								</div>
+								<div class="u-flexSpace u-wrapper">
+									<div class="Tabs-content Tabs-captionButton--active">
+										<div class="Tabs-contentItem u-width60proc">
+								  			<progress max="100" value="80"></progress>
+											<!-- <input type="text" id="amount" readonly> -->
+											<div class="Slider-range"></div>
+								  		</div>
+								  		<div class="Tabs-contentItem u-width40proc">
+								  			<div class="Progress">
+												<div class="Progress-bar Progress-bar--lightblue">
+					  								<div class="Progress-barCenter"></div>
+												</div>
+												<div class="Progress-text">37%</div>
+											</div>
+								  		</div>
+									</div>	
+									<div class="Tabs-content">
+										<div class="Tabs-contentItem">
+								  			12113
+								  		</div>
+									</div>	
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="Type">
+			<div class="u-flexCenter">
+				<div class="u-width960 u-padding10">
+					<div class="u-flexStart">
+						<div class="Text">
+							<h3 class="Text-nameSect">How to succeed in online dating</h3>
+							<p class="Text-sub Text-sub--column">
+								There is no secret to being successful in online dating - you just need to be yourself. Be active, comment on other members' profiles, send them mails, chat with them and rate their profiles. We provide a wide range of features allowing you to gather as many contacts as you can handle. It is better to rotate photographs of yourself regularly, update the details on your profile frequently, use the instant communicator facility, and log onto the site as much as possible, as well as at different times, to meet as many members as you can. It is most important to be honest, positive and patient in all your site activities.
+								<br>
+								<span>
+								In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then be prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+								</span>
+								<br>
+								You can also upload photos to your dating profile from your Facebook account.
+								<br> 
+								1.  Access your dating life even when you’re not browsing Cupid.com!
+								2.  Search for new matches from your browser easily
+								3.  Read and write messages & chat with members live; receive Datecasts, winks and alerts when your friends are online or have updated their profile info
+								<br>
+								<quotes>
+								In the "My Account" area visit the section for photos entitled "My Photos" and select the option "Click to upload photos". You will then be prompted to upload a photo from your computer. Your 'Primary' photo is visible to everyone and should be a 'normal' photo. 'For friends only' photos are visible only to those on your friends list.
+								</quotes>
+							</p>
 						</div>
 					</div>
 				</div>
@@ -195,6 +253,35 @@
 	  arrows: true,
 	  adaptiveHeight: true
 	});
+</script>
+<script>
+	(function($) {
+	$(function() {
+	 
+	  $('div.Tabs-caption').on('click', 'button:not(.Tabs-caption--active)', function() {
+	    $(this)
+	      .addClass('Tabs-captionButton--active').siblings().removeClass('Tabs-captionButton--active')
+	      .closest('div.Tabs').find('div.Tabs-content').removeClass('Tabs-captionButton--active').eq($(this).index()).addClass('Tabs-captionButton--active');
+	  });
+	 
+	});
+	})(jQuery);
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$( function() {
+    $( ".Slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 100, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( ".Slider-range" ).slider( "values", 0 ) +
+      " - $" + $( ".Slider-range" ).slider( "values", 1 ) );
+  } );
 </script>
 </body>
 </html>
