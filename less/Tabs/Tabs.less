@@ -1,3 +1,27 @@
 .Tabs {
-	
+	padding-left: 48px;
+	padding-top: 22px;
+
+	&-caption {
+
+	}
+
+	&-content {
+		display: none; 
+		width: 100%;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+		border: 1px solid #ffffff;
+		border-radius: 5px;
+		background-color: #ffffff;
+		background-color: #e3e3e3;
+		background-image: linear-gradient(to bottom, #ffffff 0%, #fafafa 100%);
+
+	  &.Tabs-captionButton--active {
+	  	display: flex; 
+	  	flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		}
+	}
 }
