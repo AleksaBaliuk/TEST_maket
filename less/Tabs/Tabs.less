@@ -6,7 +6,45 @@
 
 	}
 
+	&-captionButton {
+		background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIsAAAAmCAYAAAD0m2jPAAAFRElEQVR4Xu2cT0hjRxzHv++fjWuNPdgG1h5abIVikYIiSgVhg2WxLF2oaG8WpIti9SL24qkXwUO3iBiqxZNIe9AtXqw9bEpDBd2ta2rsoaxY2CKmNupqNkmTvLxXfulMzYotkSbNe2YGhjzMOO/NL5/8/s38IiG7JmU3rKhHmZd99f8GAb1HXWFdBSCzvxU7PAQG7waAFOt0Tf1SgvNPHzpBoQFwLC0tvd7U1PS20+l8U5blakmSqi77NyiL9R2ZpnlimuaxYRihcDi8urGxcdftdvsBxAEkMuDJYjp7DDkLC9ckpXNzc691dHR8rGnadcMwQN00zXQv9iZJp2Kja1mW012SpP2Tk5O54eHhyenp6d8YOPpl0TRnYSFTU7a1tfVObW3tZ7qul3JIih2QbNbPoVEU5Xh/f/9Tl8s1CSDCoCHzZOuWCQuZnjKPx/NGX1/fsq7rV1IpMsWiXVQCBI2iKKSFfxgfH781NDT0EEDM7v4Mh4VenwFQmUwmFwA0ClAuisjT48k8ETCKohx5vd5ut9v9HYAoADJLtmwcFop4nGtra+82NDR8ruu68E1y9HESMKqqPvZ4PDf6+/t/ZMDYUmVzWEoAvBAOhyccDsdNoVVyRAqbhoCRZXm7s7PzxsLCwiMAfzCTlNsb5Xk2nkspBfCiYRjfJpPJqyLiyb3UVVVFNBqddTqdHwE4YuG1rUJLDsuzAF4yTXM1Ho9fyb2oxIzkw2iahuXl5ffa29u/ARBmuRjbCIfDUg6g2jTNB/E45ZREy4cEmMP7iyzL1wDsswjJNtqFw+IE8AqFegKWfGByOidpl2AwOFZVVXWbmaNkfu+Yu9kzYXnVNM37ApbcCfe8mSgHo2labHBw8NrExMRPLGlni4SdgCW/bJw7Ozm7kUhkrqKiYhjAAQDSLpY3RwKWAsBCzm5JSUlqdHS0bWRk5AFzdi2vXQQsBYCFbknaJRaLfVVeXj4AIGSHUFrAUiBYeCg9Ozt7s7u7m7YCLB9KC1gKBAvdlkJpAGuapnUC+J1ldi3ruwhYCggLaRcyR36/f6C+vv5LAI+tvNEoYCkgLHRrFkof9fb2vjU1NfWzlUNpAUuBYeHOrq7rdx0Ox/sslKaNRsuZIwGLBWDh5igUCt12uVxjzBxZLvciYLEALNwckcO7vr5+q7Gx8Q6AE+a/WEbDCFgsAkuG/xJbWVn5oKWl5WsWTlvmwLeAxUKw8HBaVdVUIBDor6urmwfwhG0HFDzDK2CxGCyZJunw8PCTrq6uCa/XSxleOjtCxzELZpYELBaEhQPDSkt+3d7eHq2pqSEtQwe+qYCNVz3+r+AIWCwKC38sXlYCYGN3d3d2YGBgfnFxkZJ3BA33Zzg0eYVHwGJxWOjxKLTmpSWyLD+JRqPzm5ubd5qbm1czoCETlalx/gtA5/6vgMUGsGQ+Ii+XpTCbrlOp1L1YLOYPBoP3Dg4O9qLRaCQcDkf29vaigUAgMjk5SRuU1LLVOgQcaSzK8zyluQQsNoPlLDhc65C54lqIj8msyb7AMg8SicR9n8831tbWts7OCacda3EG9wJSLIahXHOpqmrs7Ox8WF1d/QUL3/VMWF42TXODCuFFExJgEZnp8/mut7a2fk/HJzgsVCt0dWZmxh0KhSoSiQRVKIpWRBKQJCnt08iybCiKkiorK4tVVlaGI5HIw56eHvrdmRgvX6Wi+AoAzwN4DoCApYhAOWepZF4oCXjMylVonyqtWdJAMUBIwxAof3lLohWzBEjTUC6Hjkuks8ccFg4M/824YhaSWPupBAiYv3M3fwK2QVRN5IewOwAAAABJRU5ErkJggg==
+			) 1% 0 no-repeat;
+		
+	    border: none;
+	    width: 134px;
+	    height: 33px;
+	    text-align: left;
+	    background-color: #f8f8f8; 
+	    color: #969696;
+	    font-family: "Source Sans Pro";
+	    font-size: 16px;
+	    font-weight: 300;
+	    outline: none;
+	    padding-right: 10px;
+	    z-index: 5;
+		
+		&--large {
+	    	width: 190px;
+	    	margin-left: -50px;
+	    	background-size: cover;
+	    }
+
+	    &--active {
+	    	color: #ffa352;
+	    	z-index: 999;
+	    }
+
+	    span {
+	    	color: #b9b9b9;
+	    }
+	}
+	
+
 	&-content {
+		padding-left: 19px;
+		padding-top: 16px;
+		padding-bottom: 19px;
+		padding-left: 22px;
 		display: none; 
 		width: 100%;
 		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
