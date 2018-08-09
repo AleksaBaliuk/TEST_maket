@@ -1,0 +1,76 @@
+@diameter:91px;
+@gray:#e7e8e8;
+@progress: 133;
+@orange:#ffa352;
+@border:17px;
+
+.Progress {
+  position: relative;
+  
+
+  &-bar {
+    position: relative;
+    width: @diameter;
+    height: @diameter;
+    border-radius: 50%;
+    background-color: @orange;
+    margin-left: auto;
+    margin-right: auto;
+
+    &::before {
+      position: absolute;
+      content: '';
+    		& when (@progress > 180) {
+          background-color: @orange;
+        }
+        & when (@progress =< 180) {
+          background-color: @gray;
+        }
+    	width: @diameter;
+      height: @diameter;
+      border-radius: 50%;
+      clip: rect(0,calc(@diameter / 2), @diameter, 0);
+      transform-origin: 50% 50%;
+    		& when (@progress =< 180) {
+          transform: rotate(~"180 + @{progress}deg");
+        }
+        & when (@progress > 180) {
+          transform: rotate(~"180 + @{progress} - 180deg");
+        }
+    	z-index: 1;
+  		}
+ 		&::after {
+    	position: absolute;
+      content: '';
+      background-color: @gray;
+      width: @diameter;
+      height: @diameter;
+      border-radius: 50%;
+      clip: rect(0, calc(@diameter / 2), @diameter, 0);
+      transform-origin: 50% 50%;
+      transform: rotate(0deg);
+  		}
+	}
+	&-barCenter {
+   	position: absolute;
+   	top: @border;
+   	left: @border;
+   	width: calc(@diameter - 2 * @border);
+   	height: calc(@diameter - 2 * @border);
+   	background-color: white;
+   	border-radius: 50%;
+   	z-index: 2;
+  	}
+	&-text {
+  	position: absolute;
+		top:35%;
+		left:40%;
+		content:'';
+		z-index:999;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.42);
+    color: #4e4e4e;
+    font-family: "Source Sans Pro - Extra Light";
+    font-size: 21px;
+    font-weight: 400;
+		}	
+}
