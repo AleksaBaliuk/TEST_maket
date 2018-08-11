@@ -63,31 +63,29 @@
 		border-radius: 50%;
 	}
 	
-	.slick-prev {
-    	left: -25px;
+	
+	&-miniItem {
+		cursor: pointer;
+		position: relative;
+		&:hover .Slider-miniTitle {
+	    	opacity: 1;
+	    }
 	}
-	.slick-next {
-    	right: -25px;
-	}
-	.slick-prev, .slick-next {
-	    font-size: 0;
-	    line-height: 0;
-	    position: absolute;
-	    top: 50%;
-	    display: block;
-	    width: 20px;
-	    height: 20px;
-	    padding: 0;
-	    -webkit-transform: translate(0, -50%);
-	    -ms-transform: translate(0, -50%);
-	    transform: translate(0, -50%);
-	    cursor: pointer;
-	    color: transparent;
-	    border: none;
-	    outline: none;
-	    background: transparent; 
-	}
+	
+	&-miniTitle {
+		position: absolute;
+		top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    width: 83%;
+	    min-height: 200px;
+	    background: rgba(0, 0, 0, 0.58);
+	    opacity: 0;
+	    transition: all .7s;
 
+	    
+	}
 
 
 

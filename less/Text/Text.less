@@ -1,5 +1,6 @@
 .Text {
-	
+	position: relative;
+
 	&-form {
 		color: #666666;
 		font-family: 'Source Sans Pro', sans-serif;
@@ -65,7 +66,47 @@
 		    column-gap: 33px;
 		}
 	}
+	
+	&-subSlider {
+		color: #ffffff;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 16px;
+		font-weight: 300;
 
+
+		&--smile {
+			position: absolute;
+			content: '';
+			display: block;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABYElEQVQ4T52TIU9DQRCEv1XgQOLAgQOJQ4IDBw4kDsvPAFlHZWVdcdS1Dhx1leAqizryNXcv1xdKCZu8tLm7nZ2dnQ1akVLaBA6BPWAH2AY+8jeNiLd2TtQHKaUD4BwQaFUI2I8IfxfRgKSUjoHTX5LrqznQi4hpA5IZXP4RoDwTqBMRs8ga3OUWvoABMANktl8BDwErq9VJPlejriBHWQfP+/nSZP/fAlvAGBgBu8AEOMvi+/xRkKuqYrdi0MmPTZSBk1Jw21BUGRnPgtzkCh68ZwaO1bheMynfjAW5Bzaq3tXDr1Rep/ekzWRdwk/3Q0EuKpH+A9IXRIHs3bCNMqFVgIpbPKUlHhaObYmrpV9XIbSYDyPipYA4DT1RBB5EhN5oIpvStdBXxifwFBHzenechuMuQLbmyPWFRVzOspgNgGjtLfZR7cZ2V2owsoX6YgmkXGTqVpZB7VJ3RWZL8Q2FjnxdJOSfcAAAAABJRU5ErkJggg==
+				) 50% no-repeat;
+			width: 17px;
+			height: 17px;
+			opacity: 0.5;
+			bottom: -10px;
+			left: 10px;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+		&--add {
+			position: absolute;
+			content: '';
+			display: block;
+			background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABI0lEQVQ4T4WUDVEDMRCFv+cAFEAVFAdQBeAAJBQFUAWAAkABOIAqABRQB+BgmXeTHHe5pLcznc5kk7fvJzlRqYg4Ae6As9T+Ba4lPZXbVS5ExAHwDfi/rJWk9+FiDeACeKkxA54lXc0B3AI3DYCtpCyr21JjsE76axg7SYs5Bq/AeYOBlxeSdrlfY+AEDHJUAXmQZIZ9TQDciQjrfCsAJvqrHuRDEWGaQxaTCJsAEeGoHgsGG0lOaFQjCYm6DRzpTCc26XItga/sRQeQbp8128BWGcDenAK9HxnAd/yycfIQ8FTXfRrymVkqTf/ZM3lVSeQ/xkZkQ7xZAOv+aDGQ1BsdEX6JVQ+OAUeXH4o3lWWfPMy/sYl79I9a6X54mB9V93H5AwjmY0dyHunwAAAAAElFTkSuQmCC
+				) 50% no-repeat;
+			width: 17px;
+			height: 17px;
+			opacity: 0.5;
+			bottom: -10px;
+			right: 10px;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
 	&-subOrange {
 		color: #ffa352;
 		line-height: 16px;

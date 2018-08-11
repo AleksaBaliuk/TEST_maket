@@ -47,7 +47,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .u-ciclePhoto {
   border-radius: 50%;
@@ -188,30 +188,24 @@
   opacity: 1;
   border-radius: 50%;
 }
-.Slider .slick-prev {
-  left: -25px;
-}
-.Slider .slick-next {
-  right: -25px;
-}
-.Slider .slick-prev,
-.Slider .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+.Slider-miniItem {
   cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
+  position: relative;
+}
+.Slider-miniItem:hover .Slider-miniTitle {
+  opacity: 1;
+}
+.Slider-miniTitle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 83%;
+  min-height: 200px;
+  background: rgba(0, 0, 0, 0.58);
+  opacity: 0;
+  transition: all 0.7s;
 }
 .Slider-range {
   width: 214px;
@@ -276,6 +270,9 @@
 .Tabs-contentItem {
   align-self: flex-start;
 }
+.Text {
+  position: relative;
+}
 .Text-form {
   color: #666666;
   font-family: 'Source Sans Pro', sans-serif;
@@ -335,6 +332,42 @@
   -webkit-column-gap: 33px;
   -moz-column-gap: 33px;
   column-gap: 33px;
+}
+.Text-subSlider {
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+.Text-subSlider--smile {
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABYElEQVQ4T52TIU9DQRCEv1XgQOLAgQOJQ4IDBw4kDsvPAFlHZWVdcdS1Dhx1leAqizryNXcv1xdKCZu8tLm7nZ2dnQ1akVLaBA6BPWAH2AY+8jeNiLd2TtQHKaUD4BwQaFUI2I8IfxfRgKSUjoHTX5LrqznQi4hpA5IZXP4RoDwTqBMRs8ga3OUWvoABMANktl8BDwErq9VJPlejriBHWQfP+/nSZP/fAlvAGBgBu8AEOMvi+/xRkKuqYrdi0MmPTZSBk1Jw21BUGRnPgtzkCh68ZwaO1bheMynfjAW5Bzaq3tXDr1Rep/ekzWRdwk/3Q0EuKpH+A9IXRIHs3bCNMqFVgIpbPKUlHhaObYmrpV9XIbSYDyPipYA4DT1RBB5EhN5oIpvStdBXxifwFBHzenechuMuQLbmyPWFRVzOspgNgGjtLfZR7cZ2V2owsoX6YgmkXGTqVpZB7VJ3RWZL8Q2FjnxdJOSfcAAAAABJRU5ErkJggg==
+				) 50% no-repeat;
+  width: 17px;
+  height: 17px;
+  opacity: 0.5;
+  bottom: -10px;
+  left: 10px;
+}
+.Text-subSlider--smile:hover {
+  opacity: 1;
+}
+.Text-subSlider--add {
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABI0lEQVQ4T4WUDVEDMRCFv+cAFEAVFAdQBeAAJBQFUAWAAkABOIAqABRQB+BgmXeTHHe5pLcznc5kk7fvJzlRqYg4Ae6As9T+Ba4lPZXbVS5ExAHwDfi/rJWk9+FiDeACeKkxA54lXc0B3AI3DYCtpCyr21JjsE76axg7SYs5Bq/AeYOBlxeSdrlfY+AEDHJUAXmQZIZ9TQDciQjrfCsAJvqrHuRDEWGaQxaTCJsAEeGoHgsGG0lOaFQjCYm6DRzpTCc26XItga/sRQeQbp8128BWGcDenAK9HxnAd/yycfIQ8FTXfRrymVkqTf/ZM3lVSeQ/xkZkQ7xZAOv+aDGQ1BsdEX6JVQ+OAUeXH4o3lWWfPMy/sYl79I9a6X54mB9V93H5AwjmY0dyHunwAAAAAElFTkSuQmCC
+				) 50% no-repeat;
+  width: 17px;
+  height: 17px;
+  opacity: 0.5;
+  bottom: -10px;
+  right: 10px;
+}
+.Text-subSlider--add:hover {
+  opacity: 1;
 }
 .Text-subOrange {
   color: #ffa352;
@@ -965,6 +998,7 @@ h2 {
   max-width: 278px;
 }
 
+
 .Progress {
   position: relative;
 }
@@ -1022,7 +1056,6 @@ h2 {
   font-size: 21px;
   font-weight: 400;
 }
-
 
 .Register {
   background: url('../img/bg.jpg') 50% 50% no-repeat;
@@ -1095,30 +1128,24 @@ h2 {
   opacity: 1;
   border-radius: 50%;
 }
-.Slider .slick-prev {
-  left: -25px;
-}
-.Slider .slick-next {
-  right: -25px;
-}
-.Slider .slick-prev,
-.Slider .slick-next {
-  font-size: 0;
-  line-height: 0;
-  position: absolute;
-  top: 50%;
-  display: block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+.Slider-miniItem {
   cursor: pointer;
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
+  position: relative;
+}
+.Slider-miniItem:hover .Slider-miniTitle {
+  opacity: 1;
+}
+.Slider-miniTitle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 83%;
+  min-height: 200px;
+  background: rgba(0, 0, 0, 0.58);
+  opacity: 0;
+  transition: all 0.7s;
 }
 .Slider-range {
   width: 214px;
@@ -1245,6 +1272,9 @@ h2 {
   align-self: flex-start;
 }
 
+.Text {
+  position: relative;
+}
 .Text-form {
   color: #666666;
   font-family: 'Source Sans Pro', sans-serif;
@@ -1304,6 +1334,42 @@ h2 {
   -webkit-column-gap: 33px;
   -moz-column-gap: 33px;
   column-gap: 33px;
+}
+.Text-subSlider {
+  color: #ffffff;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+}
+.Text-subSlider--smile {
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAABYElEQVQ4T52TIU9DQRCEv1XgQOLAgQOJQ4IDBw4kDsvPAFlHZWVdcdS1Dhx1leAqizryNXcv1xdKCZu8tLm7nZ2dnQ1akVLaBA6BPWAH2AY+8jeNiLd2TtQHKaUD4BwQaFUI2I8IfxfRgKSUjoHTX5LrqznQi4hpA5IZXP4RoDwTqBMRs8ga3OUWvoABMANktl8BDwErq9VJPlejriBHWQfP+/nSZP/fAlvAGBgBu8AEOMvi+/xRkKuqYrdi0MmPTZSBk1Jw21BUGRnPgtzkCh68ZwaO1bheMynfjAW5Bzaq3tXDr1Rep/ekzWRdwk/3Q0EuKpH+A9IXRIHs3bCNMqFVgIpbPKUlHhaObYmrpV9XIbSYDyPipYA4DT1RBB5EhN5oIpvStdBXxifwFBHzenechuMuQLbmyPWFRVzOspgNgGjtLfZR7cZ2V2owsoX6YgmkXGTqVpZB7VJ3RWZL8Q2FjnxdJOSfcAAAAABJRU5ErkJggg==
+				) 50% no-repeat;
+  width: 17px;
+  height: 17px;
+  opacity: 0.5;
+  bottom: -10px;
+  left: 10px;
+}
+.Text-subSlider--smile:hover {
+  opacity: 1;
+}
+.Text-subSlider--add {
+  position: absolute;
+  content: '';
+  display: block;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAABI0lEQVQ4T4WUDVEDMRCFv+cAFEAVFAdQBeAAJBQFUAWAAkABOIAqABRQB+BgmXeTHHe5pLcznc5kk7fvJzlRqYg4Ae6As9T+Ba4lPZXbVS5ExAHwDfi/rJWk9+FiDeACeKkxA54lXc0B3AI3DYCtpCyr21JjsE76axg7SYs5Bq/AeYOBlxeSdrlfY+AEDHJUAXmQZIZ9TQDciQjrfCsAJvqrHuRDEWGaQxaTCJsAEeGoHgsGG0lOaFQjCYm6DRzpTCc26XItga/sRQeQbp8128BWGcDenAK9HxnAd/yycfIQ8FTXfRrymVkqTf/ZM3lVSeQ/xkZkQ7xZAOv+aDGQ1BsdEX6JVQ+OAUeXH4o3lWWfPMy/sYl79I9a6X54mB9V93H5AwjmY0dyHunwAAAAAElFTkSuQmCC
+				) 50% no-repeat;
+  width: 17px;
+  height: 17px;
+  opacity: 0.5;
+  bottom: -10px;
+  right: 10px;
+}
+.Text-subSlider--add:hover {
+  opacity: 1;
 }
 .Text-subOrange {
   color: #ffa352;
@@ -1504,7 +1570,7 @@ h2 {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 }
 .u-ciclePhoto {
   border-radius: 50%;
