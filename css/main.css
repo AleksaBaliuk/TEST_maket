@@ -55,6 +55,14 @@
 .u-paddingTop170 {
   padding-top: 185px;
 }
+.Footer-content {
+  padding-bottom: 28px;
+  border-top: 1px solid #cfcfcf;
+}
+.Footer-logo {
+  width: 112px;
+  height: 33px;
+}
 .Form {
   background-color: #ffffff;
   min-height: 466px;
@@ -358,6 +366,24 @@
   right: 135px;
   width: 6px;
   height: 8px;
+}
+.Text-subFooter {
+  width: 196px;
+  height: 52px;
+  color: #4e4e4e;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+  margin-bottom: 0;
+}
+.Text-subFooter span {
+  color: #cfcfcf;
+}
+.Text-subFooter--year {
+  color: #cfcfcf;
+  font-size: 31px;
+  margin-top: 0;
 }
 .Users {
   padding-left: 48px;
@@ -652,49 +678,6 @@ h2 {
   margin: 0;
 }
 
-
-.Form {
-  background-color: #ffffff;
-  min-height: 466px;
-}
-.Form-name {
-  padding-top: 26px;
-}
-.Form-name h2 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 44px;
-  background: linear-gradient(to top, #ff8312 0%, #ffd5ae 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #ff800c;
-  font-weight: 300;
-}
-.Form input[type="name"] {
-  width: 320px;
-  height: 36px;
-  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.33);
-  border: 1px solid rgba(0, 0, 0, 0.21);
-  background-color: #ffd40d;
-  background-image: linear-gradient(to top, #f5fafb 0%, #e6e6e6 100%);
-  border-radius: 50px;
-  outline: none;
-  padding: 10px;
-  color: #666666;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 50px;
-}
-
-.Header {
-  padding-top: 16px;
-  padding-bottom: 9px;
-}
-.Header-logo {
-  max-height: 82px;
-  max-width: 278px;
-}
-
 .Button-big {
   width: 320px;
   height: 70px;
@@ -822,77 +805,56 @@ h2 {
   visibility: visible;
 }
 
+.Footer-content {
+  padding-bottom: 28px;
+  border-top: 1px solid #cfcfcf;
+}
+.Footer-logo {
+  width: 112px;
+  height: 33px;
+}
 
-.Slider .slick-dots {
-  position: absolute;
-  bottom: 28px;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  text-align: center;
-}
-.Slider .slick-dots li {
-  position: relative;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  cursor: pointer;
-}
-.Slider .slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-  display: block;
-  width: 11px;
-  height: 11px;
-  box-shadow: 0 0 5px rgba(252, 252, 252, 0.75);
-  background-color: #000000;
-  opacity: 0.5;
-  padding: 5px;
-  cursor: pointer;
-  color: transparent;
-  border: 0;
-  border-radius: 50%;
-  outline: none;
-}
-.Slider .slick-dots li button:before {
-  font-family: 'slick';
-  font-size: 6px;
-  line-height: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  content: '•';
-  text-align: center;
-  opacity: 0.25;
-  color: black;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.Slider .slick-dots li.slick-active button:before {
-  width: 11px;
-  height: 11px;
+.Form {
   background-color: #ffffff;
-  background-image: linear-gradient(to top, #ff891f 0%, #ffae02 100%);
-  opacity: 1;
-  border-radius: 50%;
+  min-height: 466px;
+}
+.Form-name {
+  padding-top: 26px;
+}
+.Form-name h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 44px;
+  background: linear-gradient(to top, #ff8312 0%, #ffd5ae 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #ff800c;
+  font-weight: 300;
+}
+.Form input[type="name"] {
+  width: 320px;
+  height: 36px;
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.33);
+  border: 1px solid rgba(0, 0, 0, 0.21);
+  background-color: #ffd40d;
+  background-image: linear-gradient(to top, #f5fafb 0%, #e6e6e6 100%);
+  border-radius: 50px;
+  outline: none;
+  padding: 10px;
+  color: #666666;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 50px;
 }
 
-.Register {
-  background: url('../img/bg.jpg') 50% 50% no-repeat;
-  background-size: cover;
-  padding-bottom: 18px;
-  padding-top: 20px;
+
+.Header {
+  padding-top: 16px;
+  padding-bottom: 9px;
 }
-.Register-content {
-  min-height: 466px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-  background: #f8f8f8;
+.Header-logo {
+  max-height: 82px;
+  max-width: 278px;
 }
 
 .Progress {
@@ -953,6 +915,78 @@ h2 {
   font-weight: 400;
 }
 
+.Register {
+  background: url('../img/bg.jpg') 50% 50% no-repeat;
+  background-size: cover;
+  padding-bottom: 18px;
+  padding-top: 20px;
+}
+.Register-content {
+  min-height: 466px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: #f8f8f8;
+}
+
+.Slider .slick-dots {
+  position: absolute;
+  bottom: 28px;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.Slider .slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+.Slider .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 11px;
+  height: 11px;
+  box-shadow: 0 0 5px rgba(252, 252, 252, 0.75);
+  background-color: #000000;
+  opacity: 0.5;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  border-radius: 50%;
+  outline: none;
+}
+.Slider .slick-dots li button:before {
+  font-family: 'slick';
+  font-size: 6px;
+  line-height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: '•';
+  text-align: center;
+  opacity: 0.25;
+  color: black;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.Slider .slick-dots li.slick-active button:before {
+  width: 11px;
+  height: 11px;
+  background-color: #ffffff;
+  background-image: linear-gradient(to top, #ff891f 0%, #ffae02 100%);
+  opacity: 1;
+  border-radius: 50%;
+}
+
 .Stars {
   padding-top: 10px;
   padding-bottom: 19px;
@@ -1011,10 +1045,6 @@ h2 {
   top: 0;
   left: 72px;
   background-size: contain;
-}
-
-.Users {
-  padding-left: 48px;
 }
 
 .Tabs {
@@ -1212,7 +1242,29 @@ h2 {
   width: 6px;
   height: 8px;
 }
+.Text-subFooter {
+  width: 196px;
+  height: 52px;
+  color: #4e4e4e;
+  font-family: "Source Sans Pro";
+  font-size: 20px;
+  font-weight: 300;
+  text-align: right;
+  margin-bottom: 0;
+}
+.Text-subFooter span {
+  color: #cfcfcf;
+}
+.Text-subFooter--year {
+  color: #cfcfcf;
+  font-size: 31px;
+  margin-top: 0;
+}
 
+
+.Users {
+  padding-left: 48px;
+}
 
 .u-wrapper,
 .u-width100 {
