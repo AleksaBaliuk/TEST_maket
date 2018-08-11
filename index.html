@@ -156,8 +156,7 @@
 												</div>
 												</td>
 											</tr>
-										</table>	
-										
+										</table>											
 									</form>
 								</div>
 							</div>
@@ -314,7 +313,7 @@
 									<div class="Tabs-content Tabs-captionButton--active">
 										<div class="Tabs-contentItem u-width60proc">
 								  			<progress max="100" value="70" class="Slider-progressLine">20%</progress>
-								  			<ul class="uk-pagination u-flexCenter" data-uk-pagination="{items:25, itemsOnPage:5, currentPage:3}">
+								  			<ul class="uk-pagination u-flexStart" data-uk-pagination="{items:25, itemsOnPage:5, currentPage:3}">
 								  			</ul>
 											<div class="Slider-range"></div>
 								  		</div>
@@ -402,7 +401,7 @@
 	  speed: 300,
 	  slidesToShow: 1,
 	  arrows: false,
-	  adaptiveHeight: true
+	  adaptiveHeight: false
 	});
 	$('.Slider-mini').slick({
 	  dots: false,
@@ -442,11 +441,7 @@
       " - $" + $( ".Slider-range" ).slider( "values", 1 ) );
   } );
 </script>
-
 <script>
-	/*
- * Based on simplePagination - Copyright (c) 2012 Flavius Matis - http://flaviusmatis.github.com/simplePagination.js/ (MIT)
- */
 (function(addon) {
 
     var component;
@@ -582,7 +577,7 @@
             pageIndex = pageIndex < 0 ? 0 : (pageIndex < this.pages ? pageIndex : this.pages - 1);
             options   = UI.$.extend({ text: pageIndex + 1 }, opts);
 
-            item = (pageIndex == this.currentPage) ? '<li class="uk-active"><span>' + (options.text) + '</span></li>' : '<li><a href="#page-'+(pageIndex+1)+'" data-page="'+pageIndex+'">'+options.text+'</a></li>';
+            item = (pageIndex == this.currentPage) ? '<li class="uk-active"><span>' + 'step ' +(options.text) + '</span></li>' : '<li><a href="#page-'+(pageIndex+1)+'" data-page="'+pageIndex+'">'+'step ' +options.text+'</a></li>';
 
             this.element.append(item);
         }
@@ -590,7 +585,6 @@
 
     return UI.pagination;
 });
-
 </script>
 </body>
 </html>

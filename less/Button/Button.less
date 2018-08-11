@@ -49,7 +49,7 @@
 
 			
 		}
-		&--woman:checked::before{
+		&--woman::checked::before{
 			position: absolute;
 			content:'';
 			display: block;
@@ -75,7 +75,7 @@
 			left: 15px;
 			visibility: visible;		
 		}
-		&--man:checked::before{
+		&--man::checked::before{
 			position: absolute;
 			content:'';
 			display: block;
@@ -112,12 +112,19 @@
 		}
 		&--mounth {
 			width: 119px;
+			@media (max-width: 720px) {
+				width: 109px;
+			}
 		}
 		&--year {
 			width: 105px;
 		}
 		&--city {
 			width: 320px;
+
+			@media (max-width: 720px) {
+				width: 310px;
+			}
 		}
 		&--bnt::before,&--bnt::after  {
 			position: absolute;
@@ -161,7 +168,7 @@
 
 			
 		}
-		&--check:checked::before{
+		&--check::checked::before{
 			position: absolute;
 			content:'';
 			display: block;
@@ -196,7 +203,7 @@
 
 			
 		}
-		&--radioMini:checked::before{
+		&--radioMini::checked::before{
 			position: absolute;
 			content:'';
 			display: block;
