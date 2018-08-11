@@ -62,8 +62,42 @@
 		opacity: 1;
 		border-radius: 50%;
 	}
+	
+	.slick-prev {
+    	left: -25px;
+	}
+	.slick-next {
+    	right: -25px;
+	}
+	.slick-prev, .slick-next {
+	    font-size: 0;
+	    line-height: 0;
+	    position: absolute;
+	    top: 50%;
+	    display: block;
+	    width: 20px;
+	    height: 20px;
+	    padding: 0;
+	    -webkit-transform: translate(0, -50%);
+	    -ms-transform: translate(0, -50%);
+	    transform: translate(0, -50%);
+	    cursor: pointer;
+	    color: transparent;
+	    border: none;
+	    outline: none;
+	    background: transparent; 
+	}
+
+
+
 
 	&-range {
-		
+		width: 214px;
+		height: 16px!important;
+		border: 1px solid rgba(0, 0, 0, 0.21)!important;
+		background-color: #ffd40d!important;
+		background-image: linear-gradient(to top, #e6e6e6 0%, #f5fafb 100%)!important;
 	}
-}
+
+
+}	
